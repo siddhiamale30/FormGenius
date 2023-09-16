@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+  }
+  body{
+    font-family: montserrat;
+    background-image: linear-gradient(lightblue,white,violet);
+    background-attachment:fixed;
+    /*background-image: 
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: 1000px;*/
+  }
+  h1{
+    color: black;
+    border: #e64d4d10;
+    border: solid black;
+    border-radius: 8px;
+    border padding:30px ;
+    margin-bottom: 20px;
+    text-align:center;
+    padding-top: 3%;
+    font-size: 55px;
+
+  }
+  h4{
+    text-align: center;
+    font-size: 20px;
+  }
+  section{
+    height: 100vh;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .container{
+    width: 100%;
+    max-width: 500px;
+    margin:0 auto;
+    padding: 20px;
+    box-shadow: 4px 4px 20px #e64d4d10;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  .form-group{
+    width: 100%;
+    margin-top: 20px;
+    font-size: 23px;
+  }
+  .form-group input,
+  .form-group textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.199);
+    margin-top: 5px;
+  }
+  textarea{
+    resize:vertical;
+  }
+  button[type="submit"]{
+    width: 100%;
+    border: solid;
+    outline: none;
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    color: rgb(15, 18, 19);
+    background-image: linear-gradient(lightblue,white);
+    text-align: center;
+    cursor: pointer;
+    transition: .3s ease background-color;
+    margin-top: 10px;
+  }
+  button[type="submit"]:hover{
+    background-color: rgb(141, 143, 144);
+  }
+  #status{
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  #status.success{
+    background-color: rgb(211, 250, 153);
+    color: green;
+    animation: status 4s ease  forwards;
+  }
+  #status.error{
+    background-color: rgb(250, 129, 92);
+    color: rgb(252, 252, 252);
+    animation: status 4s ease  forwards;
+  }
+  
+  @keyframes status{
+    0%{
+      opacity: 1;
+      pointer-events: all;
+    }
+    90%{
+      opacity: 1;
+      pointer-events: all;
+    }
+    100%{
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
